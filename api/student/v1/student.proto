@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package api.student.v1;
+
+option go_package = "github.com/go-kratos/kratos-layout/api/student/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.student.v1";
+
+service Student {
+	rpc CreateStudent (CreateStudentRequest) returns (CreateStudentReply);
+	rpc UpdateStudent (UpdateStudentRequest) returns (UpdateStudentReply);
+	rpc DeleteStudent (DeleteStudentRequest) returns (DeleteStudentReply);
+	rpc GetStudent (GetStudentRequest) returns (GetStudentReply);
+	rpc ListStudent (ListStudentRequest) returns (ListStudentReply);
+}
+
+message CreateStudentRequest {}
+message CreateStudentReply {}
+
+message UpdateStudentRequest {}
+message UpdateStudentReply {}
+
+message DeleteStudentRequest {}
+message DeleteStudentReply {}
+
+message GetStudentRequest {}
+message GetStudentReply {}
+
+message ListStudentRequest {}
+message ListStudentReply {}
