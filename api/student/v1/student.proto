@@ -14,8 +14,17 @@ service Student {
 	rpc ListStudent (ListStudentRequest) returns (ListStudentReply);
 }
 
-message CreateStudentRequest {}
-message CreateStudentReply {}
+message CreateStudentRequest {
+	string id = 1;
+	string name = 2;
+	int32 age = 3;
+	string sex = 4;
+}
+message CreateStudentReply {
+    int32 code = 1;
+    string message = 2;
+    string student = 3;
+}
 
 message UpdateStudentRequest {}
 message UpdateStudentReply {}
