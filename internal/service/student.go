@@ -4,12 +4,10 @@ import (
 	"context"
 
 	pb "github.com/go-kratos/kratos-layout/api/student/v1"
-	"github.com/go-kratos/kratos-layout/internal/biz"
 )
 
 type StudentService struct {
 	pb.UnimplementedStudentServer
-	uc *biz.
 }
 
 func NewStudentService() *StudentService {
@@ -17,7 +15,6 @@ func NewStudentService() *StudentService {
 }
 
 func (s *StudentService) CreateStudent(ctx context.Context, req *pb.CreateStudentRequest) (*pb.CreateStudentReply, error) {
-
 
 	return &pb.CreateStudentReply{}, nil
 }
